@@ -1,6 +1,8 @@
 name: Output information
-on:
-  workflow_dispatch
+on: 
+  push:
+    branches:
+      - second-action-react-demo
 jobs:
   info:
     runs-on: ubuntu-latest
