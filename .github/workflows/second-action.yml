@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - second-action-react-demo
+  workflow_dispatch:
 
 jobs:
   test:
