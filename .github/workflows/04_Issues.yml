@@ -1,3 +1,6 @@
+# issues are repository scoped, need to run from default/main branch
+# cant trigger issues workflow from feature branches
+
 name: Handle Issues
 on:
   issues
