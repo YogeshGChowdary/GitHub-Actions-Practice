@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - second-action-react-demo
-  workflow_dispatch:
 
 jobs:
   test:
@@ -11,13 +10,20 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
+
       - name: Install NodeJS
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: npm
+          cache-dependency-path: 02_Demo_project/package-lock.json
+
       - name: Install dependencies
+        working-directory: 02_Demo_project
         run: npm ci
+
       - name: Run tests
+        working-directory: 02_Demo_project
         run: npm test
 
   deploy:
@@ -26,13 +32,21 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
+
       - name: Install NodeJS
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: npm
+          cache-dependency-path: 02_Demo_project/package-lock.json
+
       - name: Install dependencies
+        working-directory: 02_Demo_project
         run: npm ci
+
       - name: Build Project
         run: npm run build
+        working-directory: 02_Demo_project
+        
       - name: Deploy
         run: echo "Deploying ..."
