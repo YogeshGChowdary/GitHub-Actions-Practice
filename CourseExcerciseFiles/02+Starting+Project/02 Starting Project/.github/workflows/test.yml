@@ -1,5 +1,9 @@
 name: Test Project
-on: push
+on: 
+  push:
+    branches:
+      - second-action-react-demo
+
 jobs:
   test:
     runs-on: ubuntu-latest
