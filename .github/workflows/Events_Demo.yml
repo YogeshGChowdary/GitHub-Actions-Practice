@@ -10,10 +10,13 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
+        working-directory: Events_Demo_Project
         run: npm ci
       - name: Test code
+        working-directory: Events_Demo_Project
         run: npm run test
       - name: Build code
+        working-directory: Events_Demo_Project
         run: npm run build
       - name: Deploy project
         run: echo "Deploying..."
