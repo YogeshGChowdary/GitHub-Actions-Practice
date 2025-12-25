@@ -59,7 +59,7 @@ jobs:
           name: dist-files
 
       - name: output contents
-        run: ls
+        run: ls 05_JobArtifact_Outputs/dist
 
       - name: Deploy
         run: echo "Deploying ..."
