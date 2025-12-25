@@ -11,7 +11,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
 
-      - name: Install dependencides
+      - name: Install dependencies
         working-directory: 05_JobArtifact_Outputs
         run: npm ci
 
@@ -24,6 +24,7 @@ jobs:
         run: npm run test
 
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
