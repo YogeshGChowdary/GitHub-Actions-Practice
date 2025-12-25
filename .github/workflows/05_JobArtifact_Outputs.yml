@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with: 
           name: dist-files
-          path: dist
+          path: 05_JobArtifact_Outputs/dist
           # path: |     (if we want multiple artifacts to download, can mention different path as shown below)
           #   05_JobArtifact_Outputs/dist
           #   05_JobArtifact_Outputs/package.json
