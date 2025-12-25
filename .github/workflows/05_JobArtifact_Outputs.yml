@@ -57,10 +57,10 @@ jobs:
         uses: actions/download-artifact@v5
         with:
           name: dist-files
-          path: ./dist
+          path: 05_JobArtifact_Outputs/dist
 
       - name: output contents
-        run: ls ./dist
+        run: ls -la ./dist
 
       - name: Deploy
         run: echo "Deploying ..."
