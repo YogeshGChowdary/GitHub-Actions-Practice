@@ -2,7 +2,7 @@ name: website deployment
 on:
   push:
     branches:
-      -main
+      - main
 
 defaults:
   run:
