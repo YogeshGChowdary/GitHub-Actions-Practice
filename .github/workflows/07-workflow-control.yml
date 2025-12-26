@@ -51,7 +51,7 @@ jobs:
 
       - name: Upload test report
         if:  steps.run-tests.outcome == 'failure'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-report
           path: 07-workflow-control/test.json
@@ -78,7 +78,7 @@ jobs:
         run: npm run build
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist-files
           path: 07-workflow-control/dist
